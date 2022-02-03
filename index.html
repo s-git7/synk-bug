@@ -6,18 +6,25 @@
 </head>
 <body>
 	<script>
-	function changeText() {
-		var name = document.getElementById("welcomeForm").fname.;
-		var welcome = "Welcome, " + name;
-		document.getElementById("welcomeText").innerHTML = namex;
-		}
+		var box = document.getElementById('box')
+		document.getElementById('test').addEventListener('keyup', function (event) {
+    	box.innerHTML = event.target.value
+});
+	// function changeText() {
+	// 	var name = document.getElementById("welcomeForm").fname.;
+	// 	var welcome = "Welcome, " + name;
+	// 	document.getElementById("welcomeText").innerHTML = namex;
+	// 	}
 	</script>
-	<div id="welcomeText">
+	<!-- <div id="welcomeText">
 		<form onsubmit="changeText()" method="post" id="welcomeForm">
 			Name: <input type="text" name="fname">
 			<input type="submit">
 		</form>
-	</div>
+	</div> -->
+	<input type="text" id="test" value="">
+	<p id="box"></p>
+
 <!-- <script type="text/javascript" src="app.js"></script> -->
 </body>
 </html>

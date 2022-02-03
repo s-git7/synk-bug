@@ -2,15 +2,22 @@
 <html>
 <head>
 	<title>Bug-Fix</title>
-	<link rel="stylesheet" type="text/css" href="app.css">
+	<!-- <link rel="stylesheet" type="text/css" href="app.css"> -->
 </head>
 <body>
+	<script>
+	function changeText() {
+		var name = document.getElementById("welcomeForm").fname.value;
+		var welcome = "Welcome, " + name;
+		document.getElementById("welcomeText").innerHTML = name;
+		}
+	</script>
 	<div id="welcomeText">
 		<form onsubmit="changeText()" method="post" id="welcomeForm">
 			Name: <input type="text" name="fname">
 			<input type="submit">
 		</form>
 	</div>
-<script type="text/javascript" src="app.js"></script>
+<!-- <script type="text/javascript" src="app.js"></script> -->
 </body>
 </html>
